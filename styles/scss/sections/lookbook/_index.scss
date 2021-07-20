@@ -1,0 +1,31 @@
+.lookbook {
+  margin-bottom: 8rem;
+
+  &__col {
+    &--mens {
+      padding: 0.9375rem;
+
+      @media (min-width: $lg) {
+        padding: 0 0.9375rem 0 0;
+      }
+    }
+
+    &--womens {
+      padding: 0.9375rem;
+
+      @media (min-width: $lg) {
+        padding: 0 0.9375rem;
+      }
+    }
+
+    &--your {
+      padding: 0.9375rem;
+
+      @media (min-width: $lg) {
+        padding: 0 0 0 0.9375rem;
+      }
+    }
+  }
+}
+
+@import "./card";

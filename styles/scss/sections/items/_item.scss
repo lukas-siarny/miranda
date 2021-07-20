@@ -1,0 +1,134 @@
+.item {
+  line-height: 0;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+
+  &--pd-left {
+    @media (min-width: $xs) {
+      padding-left: 0.9375rem;
+    }
+  }
+
+  &--pd-right {
+    @media (min-width: $xs) {
+      padding-right: 0.9375rem;
+    }
+  }
+
+  &__wrapper {
+    background: $colorLight;
+    line-height: 0;
+    position: relative;
+    box-shadow: none;
+    text-align: center;
+    transition: box-shadow 250ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+
+      & .item__more-imgs {
+        opacity: 1;
+      }
+
+      & .item__detail-link {
+        opacity: 1;
+      }
+
+      & .item__info {
+        opacity: 1;
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.14);
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &__price {
+    top: 1.5rem;
+    left: 1rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #9a9a9a;
+    position: absolute;
+  }
+
+  &__more-imgs {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    opacity: 0;
+    transition: 250ms ease-in-out;
+  }
+
+  &__detail-link {
+    position: absolute;
+    font-size: 2rem;
+    color: #fff;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    text-shadow: 0px 2px 12.32px rgba(0, 0, 0, 0.14);
+    opacity: 0;
+    transition: 250ms ease-in-out;
+  }
+
+  &__info {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100%;
+    left: 0;
+    line-height: 1.5;
+    background: #fff;
+    text-align: center;
+    transform-origin: top;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    transform: scale(1, 0);
+    transform-origin: top;
+    z-index: 3;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #727272;
+  }
+
+  &__desc {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    color: #8e8c8c;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-card {
+    width: 2rem;
+    height: 2rem;
+    background: #727272;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    transition: 150ms ease-in-out;
+    color: #fff;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      background: $colorPrimary;
+    }
+  }
+}

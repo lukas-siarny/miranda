@@ -1,0 +1,30 @@
+.items-menu-list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  min-width: fit-content;
+
+  &__item {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:not(:last-of-type) {
+      margin-right: 3.5rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0.9375rem;
+    }
+
+    & > a {
+      transition: 150ms ease-in-out;
+      text-decoration: none;
+      color: #727272;
+
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+  }
+}

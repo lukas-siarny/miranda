@@ -1,0 +1,40 @@
+.header-searchbar {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: $xl) {
+    display: flex;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    height: 2rem;
+    width: 12rem;
+    border: 1px solid #e7e7e7;
+    padding: 0 3rem 0 1rem;
+    outline: none;
+    transition: 150ms ease-in-out;
+
+    &:focus {
+      border-color: #222222;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: #999999;
+  }
+}

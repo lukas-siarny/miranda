@@ -1,0 +1,31 @@
+.items {
+  margin-bottom: 4rem;
+
+  hr {
+    border-top: 1px solid #eeeeee;
+  }
+
+  &__menu {
+    height: 6rem;
+    overflow-x: auto;
+
+    @media (min-width: $sm) {
+      height: 8rem;
+    }
+  }
+
+  &__grid {
+    margin: -0.9375rem 0 3.0625rem 0;
+
+    & > :not(:first-of-type) .item--big {
+      order: 3;
+
+      @media (min-width: $lg) {
+        order: -1;
+      }
+    }
+  }
+}
+
+@import "./menu";
+@import "./item";

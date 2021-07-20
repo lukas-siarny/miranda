@@ -1,0 +1,54 @@
+.bottombar {
+  background: $colorSecondary;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+
+  @media (min-width: $sm) {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 3rem;
+  }
+
+  &__row {
+    height: 100%;
+  }
+
+  &__col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $sm) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #777777;
+
+    @media (min-width: $sm) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    & span:not(:last-of-type) {
+      margin-right: 1rem;
+
+      @media (min-width: $sm) {
+        margin-right: 2.25rem;
+      }
+    }
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

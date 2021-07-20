@@ -1,0 +1,99 @@
+.topbar {
+  width: 100%;
+  height: 3rem;
+  background: $colorSecondary;
+  font-size: 0.8125rem;
+  color: #777777;
+
+  &__row {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__currency {
+    font-weight: 600;
+    cursor: pointer;
+
+    & span {
+      display: none;
+
+      @media (min-width: $sm) {
+        display: inline-block;
+      }
+    }
+
+    & i {
+      padding-left: 0.5rem;
+    }
+  }
+
+  a {
+    color: #999999;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__items {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.topbar-list {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin: 1rem;
+  }
+}
+
+.cart {
+  height: 100%;
+  margin-left: 1rem;
+
+  @media (min-width: $sm) {
+    margin-left: 4rem;
+  }
+
+  &__button {
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: $colorPrimary;
+    padding: 0 1.5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  & .fa-shopping-cart {
+    font-size: 1.2rem;
+  }
+
+  &__button-text {
+    display: none;
+    font-weight: 600;
+
+    @media (min-width: $sm) {
+      display: block;
+      margin: 0 0.5rem 0 1.5rem;
+    }
+  }
+
+  & .fa-chevron-down {
+    display: none;
+
+    @media (min-width: $sm) {
+      display: block;
+    }
+  }
+}
